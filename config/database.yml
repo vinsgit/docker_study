@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: docker_study
+  password: root
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  host: localhost
+
+
+development:
+  <<: *default
+  database: docker_study_development
+
+test:
+  <<: *default
+  database: docker_study_test
+
+production:
+  <<: *default
+  database: docker_study_production
