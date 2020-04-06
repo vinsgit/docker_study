@@ -1,10 +1,5 @@
 version: '3'
 services:
-  db:
-    image: postgres:10.12
-    environment:
-      - "POSTGRES_USER=docker_study"
-      - "POSTGRES_PASSWORD=root"
   app:
     build: /home/qs/Desktop/docker_study
     ports:
@@ -13,9 +8,11 @@ services:
       - DATABASE_URL=postgres://docker_study:root@db/postgres
       - SECRET_KEY_BASE=147aebc025505a5a81bafe66b4ad58061c5717bdce89cea8c173296ef35bd5b8231fe61d00da218a7f4901c101a6abe2c0fd7b306de248f0a3e2c68c49361da8
       - RAILS_SERVE_STATIC_FILES=true
-#       DATABASE_URL=postgres://postgres:password@database:5432
-
-    depends_on:
-      - db
-
+#    depends_on:
+#      - db
+#  db:
+#    image: postgres:10.12
+#    environment:
+#      - "POSTGRES_USER=docker_study"
+#      - "POSTGRES_PASSWORD=root"
 
