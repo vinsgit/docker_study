@@ -17,5 +17,10 @@ test:
   database: docker_study_test
 
 production:
-  <<: *default
-  database: docker_study_production
+  adapter: postgresql
+  encoding: unicode
+  database: postgres://hixwkzweliqgan:3da6876377e3f37de7024e7715323d4144f43924dd0fc886bfb78624ffca6a3c@ec2-54-210-128-153.compute-1.amazonaws.com:5432/d1aa74ni52nk87
+  pool: 5
+  timeout: 5000
+#  <<: *default
+    #  database: docker_study_production
