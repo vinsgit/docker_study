@@ -10,8 +10,8 @@ services:
       - RAILS_SERVE_STATIC_FILES=true
     depends_on:
       - db
-    volumes:
-      - /tmp/sockets:/app/tmp/sockets
+#    volumes:
+#      - /tmp/sockets:/app/tmp/sockets
 
   db:
     image: postgres:10.12
